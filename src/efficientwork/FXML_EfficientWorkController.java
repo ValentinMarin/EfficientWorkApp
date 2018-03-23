@@ -12,13 +12,19 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.ContextMenu;
+import javafx.scene.control.DialogPane;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.SeparatorMenuItem;
+import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseButton;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  *
@@ -96,7 +102,7 @@ public class FXML_EfficientWorkController implements Initializable {
     
     private void addContextMenu() {
         cMenuAbout.setOnAction((ActionEvent e) -> {
-            
+            showAppAbout(e);
         });
         
         cMenuHideInfo.setOnAction((ActionEvent e) -> {
@@ -111,6 +117,26 @@ public class FXML_EfficientWorkController implements Initializable {
 
         btn_settings.setOnContextMenuRequested(e -> 
             contextMenu.show(btn_settings, e.getScreenX(), e.getScreenY()));
+    }
+
+    private void showAppAbout(ActionEvent e) {
+        Alert alert = new Alert(AlertType.INFORMATION);
+        // Get the Stage.
+        Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+
+        // Add a custom icon.
+        stage.getIcons().add(new Image(this.getClass().getResource("images/icon.png").toString()));
+        
+        DialogPane dialogPane = alert.getDialogPane();
+        dialogPane.getStylesheets().add(
+           getClass().getResource("resources/CSS_AboutDialog.css").toExternalForm());
+        dialogPane.getStyleClass().add("CSS_AboutDialog");
+
+        alert.setTitle("About Efficient Work App");
+        alert.setHeaderText("Author: Marin Valentin");
+        alert.setContentText("Thank you for having a look over this cool java application!");
+
+        alert.showAndWait();
     }
     
 }
