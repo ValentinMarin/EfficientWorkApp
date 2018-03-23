@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane id="AnchorPane" prefHeight="480.0" prefWidth="456.0" styleClass="background" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="efficientwork.FXML_EfficientWorkController">
+   <children>
+      <AnchorPane prefHeight="60.0" prefWidth="60.0" styleClass="background_left_panel" AnchorPane.bottomAnchor="421.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fx:id="btn_settings" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#btn_settings_clicked" onMouseDragged="#btn_settings_dragged" onMouseReleased="#btn_settings_released" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/settings.png" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+      <AnchorPane layoutY="69.0" prefHeight="60.0" prefWidth="60.0" styleClass="background_left_panel">
+         <children>
+            <ImageView fx:id="btn_charts" fitHeight="32.0" fitWidth="32.0" layoutX="14.0" layoutY="14.0" onMouseClicked="#btn_charts_clicked" onMouseDragged="#btn_charts_dragged" onMouseReleased="#btn_charts_released" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/chart.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel_right_settings" layoutX="82.0" layoutY="-1.0" prefHeight="480.0" prefWidth="372.0" styleClass="background_right_panel" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="-4.0" layoutY="25.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="background_right_panel_arrow" width="10.0" AnchorPane.topAnchor="25.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="panel_right_charts" layoutX="84.0" prefHeight="480.0" prefWidth="372.0" styleClass="background_right_panel" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="70.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="10.0" layoutX="-4.0" layoutY="95.0" rotate="45.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" styleClass="background_right_panel_arrow" width="10.0" AnchorPane.topAnchor="95.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

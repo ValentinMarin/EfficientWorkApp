@@ -1,0 +1,58 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 22, 2018, 7:05:59 PM
+    Author     : marin
+*/
+
+.background{
+    -fx-background-color: transparent;
+}
+
+.background_left_panel{
+    -fx-background-color: #ff5e57;
+    -fx-background-radius: 10 10 10 10; /* top-left, top-right, bottom-right, and bottom-left corners, in that order. */
+}
+
+.background_right_panel{
+    -fx-background-color: #485460;
+}
+
+.background_right_panel_arrow{
+    -fx-fill: #485460;
+}
+
+.context-menu {
+    -fx-skin: "com.sun.javafx.scene.control.skin.ContextMenuSkin";
+    -fx-background-color: #ecf0f1;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background-radius: 0 6 6 6, 0 5 5 5, 0 4 4 4;
+    -fx-padding: 0.333333em 0.083333em 0.666667em 0.083333em; /* 4 1 8 1 */
+}
+
+.context-menu .separator {
+    -fx-padding: 0.0em 0.333333em 0.0em 0.333333em; /* 0 4 0 4 */
+}
+
+.context-menu .scroll-arrow {
+    -fx-padding: 0.416667em 0.416667em 0.416667em 0.416667em; /* 5 */
+    -fx-background-color: #ecf0f1;
+}
+
+.context-menu .scroll-arrow:hover {
+    -fx-background: -fx-accent;
+    -fx-background-color: #ecf0f1;
+    -fx-text-fill: -fx-selection-bar-text;
+}
+
+.context-menu:show-mnemonics .mnemonic-underline {
+    -fx-stroke: -fx-text-fill;
+}
+
+.menu-item:focused {
+     -fx-background-color: #bdc3c7;
+}
+
